@@ -1,0 +1,24 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1f5ef10 .scope module, "simple_in_n_out" "simple_in_n_out" 2 3;
+ .timescale 0 0;
+L_0x1f8fae0 .functor AND 1, C4<z>, C4<z>, C4<1>, C4<1>;
+L_0x1f8fbc0 .functor AND 1, L_0x1f8fae0, C4<z>, C4<1>, C4<1>;
+L_0x1f8fca0 .functor OR 1, C4<z>, C4<z>, C4<0>, C4<0>;
+L_0x1f8fdd0 .functor OR 1, L_0x1f8fca0, C4<z>, C4<0>, C4<0>;
+v0x1f4cc50_0 .net *"_s0", 0 0, L_0x1f8fae0; 1 drivers
+v0x1f8f6d0_0 .net *"_s4", 0 0, L_0x1f8fca0; 1 drivers
+v0x1f8f770_0 .net "in_1", 0 0, C4<z>; 0 drivers
+v0x1f8f810_0 .net "in_2", 0 0, C4<z>; 0 drivers
+v0x1f8f8c0_0 .net "in_3", 0 0, C4<z>; 0 drivers
+v0x1f8f960_0 .net "out_1", 0 0, L_0x1f8fbc0; 1 drivers
+v0x1f8fa40_0 .net "out_2", 0 0, L_0x1f8fdd0; 1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "simple_in_n_out.v";
